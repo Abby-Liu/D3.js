@@ -1,0 +1,32 @@
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="tuition.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css">
+<meta charset="UTF-8">
+<svg width="100%" height="100px" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid"></svg>
+<title>大學學雜費比較</title>
+<body>
+<h1>大學學雜費比較</h1>
+<a href="bubble.html">泡泡圖</a>
+<script>
+d3.select("body").selectAll("div").data(tuition);
+var div_data_bind = d3.select("body").selectAll("div").data(tuition);
+//對沒有物件可配對的資料 建立html tag "div"
+div_set = div_data_bind.enter().append("div");
+//刪除這些沒物件可配對的資料
+div_data_bind.exit().remove();
+//放資料
+div_set.text(function(d,i) {
+	return i+1 + d[0];
+});
+
+//加入這些改變樣式 看起來像長條圖
+div_set.style("height", "25px");
+  div_set.style("background", "#FFA069");
+  div_set.style("margin", "5px");
+  div_set.style("width", function(d,i) {
+    return (d[1] / 100)+"px";
+  });
+
+</script>
+
+</body>
