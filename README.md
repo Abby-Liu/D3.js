@@ -1,8 +1,14 @@
 # My first D3.js test:
 
-In this project, we will learn...: 
+In this project, we will learn...:
  1. Basic operation
  2. Create a bubble chart and bar chart to show the tuition defference betweem each university.
+
+ ### Example:
+ **Bar chart**
+ ![bar_chart](https://github.com/Abby-Liu/D3.js/blob/master/bar_chart.jpg)
+**Bubble chart**
+![bubble_chart](https://github.com/Abby-Liu/D3.js/blob/master/bubble_chart.jpg)
 ## Include D3.js
 `<script src="https://d3js.org/d3.v3.min.js"></script>`
 
