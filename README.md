@@ -14,22 +14,32 @@ In this project, we will learn...:
 
 ![bubble_chart](https://github.com/Abby-Liu/D3.js/blob/master/bubble_chart.jpg)
 
+
 ## Include D3.js
 `<script src="https://d3js.org/d3.v3.min.js"></script>`
 
 ## Basic Operation Example
 
 select objects:
-`var root = d3.select("body");
+
+`var root = d3.select("body");`
+
 `var span = d3.select("body").select("h3").select("span");`
 
 set the content or style
+
 `span.text("hello world").style("font-size", "24px");`
+
 data binding,(select object "students"
+
 `d3.select("body").selectAll("div").data(students);`
 
+---
+
 ## Implementation of Bar Chart 長條圖實作
+
 ### tuition.js
+
 ```tuition.js
 tuition.js (部分資料):
 var tuition = [
@@ -78,3 +88,8 @@ div_set.style("height", "25px");
     return (d[1] / 100)+"px";
   });
 ```
+
+---
+
+## Implementation of Bubble Chart 泡泡圖實作
+to be continued...
